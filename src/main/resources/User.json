@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Hossain",
+    "email": "ghossain004@gmail.com",
+    "phone": "01716868041",
+    "address": "Uttara"
+  },
+  {
+    "id": 2,
+    "name": "Golam Hossain",
+    "email": "ghossain004@gmail.com",
+    "phone": "01716868041",
+    "address": "Dhanmondi"
+  },
+  {
+    "id": 3,
+    "name": "G Hossain",
+    "email": "ghossain004@gmail.com",
+    "phone": "01716868041",
+    "address": "Dhaka"
+  }
+]
