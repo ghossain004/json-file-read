@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hossain.json.entity.Json;
 import com.hossain.json.service.JsonService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +15,7 @@ import java.io.InputStream;
 import java.util.List;
 
 @SpringBootApplication
+@Slf4j
 public class JsonFileReadApplication {
 
     public static void main(String[] args) {
@@ -29,9 +31,11 @@ public class JsonFileReadApplication {
             try {
                 List<Json> jsons = objectMapper.readValue(inputStream, typeReference);
                 service.save(jsons);
-                System.out.println("Users saved");
+//                System.out.println("Users saved");
+                log.info("User saved {}", jsons.get(1));
             }catch (IOException e){
-                System.out.println("Unable to save users: " + e.getMessage());
+//                System.out.println("Unable to save users: " + e.getMessage());
+                log.info("Unable to save users {}", e.getMessage());
             }
         };
     }
